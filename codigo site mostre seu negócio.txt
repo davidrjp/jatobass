@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOSTRE SEU NEGÓCIO | Otimização Google Meu Negócio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #4285F4 0%, #34A853 50%, #FBBC05 100%);
+        }
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: scale(1.03);
+        }
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="bg-blue-600 text-white p-2 rounded-lg mr-3">
+                    <i class="fas fa-store text-xl"></i>
+                </div>
+                <h1 class="text-2xl font-bold text-gray-800">MOSTRE SEU NEGÓCIO</h1>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#servicos" class="text-gray-600 hover:text-blue-600 font-medium">Serviços</a>
+                <a href="#beneficios" class="text-gray-600 hover:text-blue-600 font-medium">Benefícios</a>
+                <a href="#sobre" class="text-gray-600 hover:text-blue-600 font-medium">Sobre Nós</a>
+                <a href="#contato" class="text-gray-600 hover:text-blue-600 font-medium">Contato</a>
+            </nav>
+            <button class="md:hidden text-gray-600">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+            <div class="hidden md:block">
+                <a href="#contato" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition duration-300">
+                    Quero Otimizar
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-20">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Destaque seu negócio no Google</h2>
+                <p class="text-xl mb-8 opacity-90">Aumente sua visibilidade, atraia mais clientes e impulsione suas vendas com nossa otimização profissional para Google Meu Negócio.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contato" class="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-bold text-center pulse-animation">
+                        Começar Agora
+                    </a>
+                    <a href="#servicos" class="border-2 border-white hover:bg-white hover:bg-opacity-10 px-8 py-3 rounded-lg font-medium text-center">
+                        Saiba Mais
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative max-w-md">
+                    <div class="absolute -top-10 -left-10 w-32 h-32 bg-yellow-400 rounded-full opacity-20"></div>
+                    <div class="absolute -bottom-10 -right-10 w-32 h-32 bg-green-500 rounded-full opacity-20"></div>
+                    <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Negócio otimizado no Google" 
+                         class="relative rounded-xl shadow-2xl border-8 border-white">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="p-4">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">+85%</div>
+                    <div class="text-gray-600">Mais visibilidade</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl font-bold text-green-600 mb-2">3x</div>
+                    <div class="text-gray-600">Mais clientes</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl font-bold text-yellow-500 mb-2">100%</div>
+                    <div class="text-gray-600">Focado no Brasil</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl font-bold text-red-500 mb-2">24h</div>
+                    <div class="text-gray-600">Suporte rápido</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicos" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Nossos Serviços de Otimização</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Tudo que seu negócio precisa para se destacar nos resultados do Google</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden feature-card transition duration-300">
+                    <div class="p-6">
+                        <div class="bg-blue-100 w-16 h-16 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-search-location text-blue-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Otimização Completa</h3>
+                        <p class="text-gray-600 mb-4">Configuração profissional de todas as informações do seu negócio no Google, incluindo categorias, horários, descrição e muito mais.</p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                Informações completas
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                Palavras-chave estratégicas
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                Atualização constante
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden feature-card transition duration-300">
+                    <div class="p-6">
+                        <div class="bg-green-100 w-16 h-16 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-images text-green-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Fotos e Vídeos Profissionais</h3>
+                        <p class="text-gray-600 mb-4">Imagens de alta qualidade que mostram seu negócio da melhor forma possível, aumentando a confiança dos clientes.</p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                Fotos profissionais
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                Vídeos 360°
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                Atualização mensal
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden feature-card transition duration-300">
+                    <div class="p-6">
+                        <div class="bg-yellow-100 w-16 h-16 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-star text-yellow-500 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Gestão de Avaliações</h3>
+                        <p class="text-gray-600 mb-4">Monitoramento e resposta profissional a todas as avaliações, incentivando clientes satisfeitos a compartilharem suas experiências.</p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                Respostas personalizadas
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                Estratégia para 5 estrelas
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                Relatórios mensais
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden feature-card transition duration-300">
+                    <div class="p-6">
+                        <div class="bg-purple-100 w-16 h-16 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-chart-line text-purple-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Relatórios de Desempenho</h3>
+                        <p class="text-gray-600 mb-4">Acompanhamento detalhado de como os clientes encontram e interagem com seu negócio no Google.</p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                Visualizações e cliques
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                Chamadas e direções
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                Análise da concorrência
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden feature-card transition duration-300">
+                    <div class="p-6">
+                        <div class="bg-red-100 w-16 h-16 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-ad text-red-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Anúncios Locais</h3>
+                        <p class="text-gray-600 mb-4">Criação e gestão de campanhas de anúncios no Google para atrair mais clientes para seu negócio físico.</p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                Anúncios patrocinados
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                Segmentação por localização
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                Otimização contínua
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden feature-card transition duration-300">
+                    <div class="p-6">
+                        <div class="bg-blue-100 w-16 h-16 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-headset text-blue-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Suporte Completo</h3>
+                        <p class="text-gray-600 mb-4">Assistência especializada para resolver qualquer problema com sua conta do Google Meu Negócio.</p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                Suporte 24/7
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                Verificação de conta
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                Atendimento personalizado
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="beneficios" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Por que otimizar seu Google Meu Negócio?</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Veja como podemos transformar sua presença online</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-10">
+                    <div class="bg-gray-100 p-6 rounded-xl">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Benefícios da otimização" 
+                             class="rounded-lg w-full">
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="space-y-8">
+                        <!-- Benefit 1 -->
+                        <div class="flex">
+                            <div class="flex-shrink-0 mr-4">
+                                <div class="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-search text-blue-600 text-xl"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">Apareça mais nos resultados de busca</h3>
+                                <p class="text-gray-600">Com a otimização correta, seu negócio aparece nas primeiras posições quando clientes procuram por serviços como o seu na região.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Benefit 2 -->
+                        <div class="flex">
+                            <div class="flex-shrink-0 mr-4">
+                                <div class="bg-green-100 w-12 h-12 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-users text-green-600 text-xl"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">Atraia mais clientes qualificados</h3>
+                                <p class="text-gray-600">Clientes que encontram seu negócio no Google estão prontos para comprar ou contratar seu serviço.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Benefit 3 -->
+                        <div class="flex">
+                            <div class="flex-shrink-0 mr-4">
+                                <div class="bg-yellow-100 w-12 h-12 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-thumbs-up text-yellow-600 text-xl"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">Aumente sua credibilidade</h3>
+                                <p class="text-gray-600">Um perfil completo com fotos, avaliações e informações atualizadas transmite confiança e profissionalismo.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Benefit 4 -->
+                        <div class="flex">
+                            <div class="flex-shrink-0 mr-4">
+                                <div class="bg-purple-100 w-12 h-12 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-money-bill-wave text-purple-600 text-xl"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">Melhore seu retorno sobre investimento</h3>
+                                <p class="text-gray-600">O Google Meu Negócio é gratuito e, quando bem otimizado, pode trazer mais resultados que muitos anúncios pagos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Como Funciona Nosso Processo</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Em poucos passos, seu negócio estará otimizado no Google</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row justify-between items-center mb-16">
+                <!-- Step 1 -->
+                <div class="flex flex-col items-center mb-10 md:mb-0 md:w-1/4 px-4">
+                    <div class="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mb-4">1</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2 text-center">Diagnóstico</h3>
+                    <p class="text-gray-600 text-center">Analisamos seu perfil atual e identificamos oportunidades de melhoria.</p>
+                </div>
+                
+                <!-- Arrow -->
+                <div class="hidden md:block mb-10 md:mb-0">
+                    <i class="fas fa-arrow-right text-gray-400 text-2xl"></i>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="flex flex-col items-center mb-10 md:mb-0 md:w-1/4 px-4">
+                    <div class="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mb-4">2</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2 text-center">Otimização</h3>
+                    <p class="text-gray-600 text-center">Implementamos todas as melhorias necessárias no seu perfil.</p>
+                </div>
+                
+                <!-- Arrow -->
+                <div class="hidden md:block mb-10 md:mb-0">
+                    <i class="fas fa-arrow-right text-gray-400 text-2xl"></i>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="flex flex-col items-center mb-10 md:mb-0 md:w-1/4 px-4">
+                    <div class="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mb-4">3</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2 text-center">Monitoramento</h3>
+                    <p class="text-gray-600 text-center">Acompanhamos os resultados e fazemos ajustes contínuos.</p>
+                </div>
+                
+                <!-- Arrow -->
+                <div class="hidden md:block mb-10 md:mb-0">
+                    <i class="fas fa-arrow-right text-gray-400 text-2xl"></i>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="flex flex-col items-center md:w-1/4 px-4">
+                    <div class="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mb-4">4</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2 text-center">Resultados</h3>
+                    <p class="text-gray-600 text-center">Seu negócio aparece mais e atrai mais clientes todos os dias.</p>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <a href="#contato" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-bold inline-block">
+                    Quero Começar Agora
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials
+</html>
