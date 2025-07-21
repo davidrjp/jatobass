@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gerador de Respostas - Google Meu Negócio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.08);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      resize: vertical;
+      min-height: 100px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .output {
+      margin-top: 25px;
+    }
+
+    .output p {
+      background: #f1f1f1;
+      padding: 15px;
+      border-radius: 6px;
+      white-space: pre-wrap;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Responder Avaliações</h1>
+    <label for="avaliacao">Cole aqui a avaliação do cliente:</label>
+    <textarea id="avaliacao" placeholder="Ex: Pizza ótima, mas o atendimento foi lento."></textarea>
+    <button onclick="gerarResposta()">Gerar Resposta</button>
+
+    <div class="output" id="output" style="display:none;">
+      <h3>Resposta sugerida:</h3>
+      <p id="respostaGerada"></p>
+    </div>
+  </div>
+
+  <script>
+    async function gerarResposta() {
+      const avaliacao = document.getElementById("avaliacao").value.trim();
+      const outputDiv = document.getElementById("output");
+      const respostaEl = document.getElementById("respostaGerada");
+
+      if (!avaliacao) {
+        alert("Por favor, cole a avaliação para gerar a resposta.");
+        return;
+      }
+
+      respostaEl.innerText = "Gerando resposta...";
+      outputDiv.style.display = "block";
+
+      const resposta = await fetch("https://api.openai.com/v1/chat/completions", {
+        method: "POST",
+        headers: {
+          "Authorization": "Bearer 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",
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          model: "gpt-4o",
+          messages: [
+            {
+              role: "system",
+              content: "Você é um atendente cordial e profissional de uma pizzaria chamada Bella Napoli, localizada em São Paulo. Sua função é responder avaliações de clientes no Google Meu Negócio com empatia, educação e foco em manter uma boa imagem do negócio. Sempre agradeça o feedback, personalize a resposta com base no tom do cliente e, se houver críticas, ofereça soluções ou convites para retornar."
+            },
+            {
+              role: "user",
+              content: `Avaliação do cliente: ${avaliacao}`
+            }
+          ],
+          temperature: 0.7
+        })
+      }).then(r => r.json());
+
+      if (resposta.choices && resposta.choices[0]) {
+        respostaEl.innerText = resposta.choices[0].message.content;
+      } else {
+        respostaEl.innerText = "Ocorreu um erro ao gerar a resposta. Verifique a chave da API.";
+      }
+    }
+  </script>
+</body>
+</html>
